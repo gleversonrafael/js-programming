@@ -1,11 +1,17 @@
-let dingle = new Object(),
-    dagin = new Object(),
-    dube = {}
-;
+let pizza = {
+    isAPizza: true,
+    sayDelicious() {
+        console.log("Delicious!");
+    }
+}
 
-dingle.isAHamster = true;
+let marguerita = {
+    isDelicious: true
+}
 
-Object.setPrototypeOf(dingle, dube);
-dagin.__proto__ = dingle;
-Object.setPrototypeOf(dube, dingle);
+marguerita.__proto__ = pizza;
+marguerita.saysDelicious = function () {
+    console.log("Not delicious!");
+}
 
+marguerita.saysDelicious();
